@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Wedding Invitation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="overlay">
+
+<h3>!! Shri Ganeshay Namah !!</h3>
+
+<h2>The Auspicious Wedding Ceremony Of</h2>
+
+<h1>Kajal Mavi</h1>
+
+<h2>&</h2>
+
+<h1>Vibhor Bhati (UPP)</h1>
+
+<div class="divider"></div>
+
+<h2>Auspicious Date</h2>
+
+<p class="date">Sunday, 19 April 2026</p>
+
+<p>Dinner & Barat Reception : 7:00 PM onwards</p>
+
+<p class="vidaai">Vidaai taro ki chaoon mein</p>
+
+<h2>Venue</h2>
+
+<p class="venue">
+Chairman Farm House <br>
+Mandoli Road, Loni, Ghaziabad (U.P.)
+</p>
+
+<h2 id="countdown"></h2>
+
+<button onclick="rsvp()">Confirm Attendance</button>
+
+</div>
+
+<script>
+
+var weddingDate = new Date("April 19, 2026 19:00:00").getTime();
+
+setInterval(function(){
+
+var now = new Date().getTime();
+
+var distance = weddingDate - now;
+
+var days = Math.floor(distance/(1000*60*60*24));
+var hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+var minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("countdown").innerHTML =
+days + " Days " + hours + " Hours " + minutes + " Minutes Remaining";
+
+},1000);
+
+function rsvp(){
+alert("Thank you for confirming your presence ❤️");
+}
+
+</script>
+
+</body>
+</html>
